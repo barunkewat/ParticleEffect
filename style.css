@@ -39,11 +39,9 @@ body {
 }
 
 .header h1 {
-  font-size: 7.5vw;
+  font-size: 7.5vmax;
   font-weight: 400;
-  line-height: 7vw;
   margin-bottom: 2.75rem;
-  letter-spacing: -3px;
 }
 
 button {
