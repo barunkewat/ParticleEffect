@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "TWK Lausanne 250";
+  src: url(./fonts/twklausanne-250.woff2) format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TWK Lausanne 250";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #1a2ffb;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  user-select: none;
+  z-index: 2;
+}
+.header p {
+  /* text-transform: uppercase; */
+  font-weight: 100;
+  font-size: 1.25rem;
+}
+
+.header h1 {
+  font-size: 7.5vw;
+  font-weight: 400;
+  line-height: 7vw;
+  margin-bottom: 2.75rem;
+  letter-spacing: -3px;
+}
+
+button {
+  background-color: white;
+  color: black;
+  padding: 0.5em 2em;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+button::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-radius: 50px;
+  background-color: #1a2ffb;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+button:hover {
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover::after {
+  display: initial;
+  height: 300px;
+  width: 300px;
+  transition: all 0.5s ease;
+}
